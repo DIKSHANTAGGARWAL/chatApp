@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+const{Server}=require("socket.io")
+
+const io = new Server({ /* options */ });
 
 function App() {
   return (
