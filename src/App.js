@@ -1,26 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-const{Server}=require("socket.io")
+import "./App.css";
+import { useEffect, useState } from "react";
 
-const io = new Server({ /* options */ });
 
 function App() {
+
+  const [ammy, setAmmy] = useState([])
+  const [bikky, setBikky] = useState([])
+  const [clat, setClat] = useState([])
+
+  function call() {
+    let q = fetch("https://financialmodelingprep.com/api/v3/financial-statement-symbol-lists?apikey=2a72ef4da815f5781303f5abe1d174f5")
+    q.then((value1) => {
+      return value1.json()
+    }).then((value2) => {
+      var [price]=value2
+      document.getElementById("message-container").innerHTML =price
+
+    })
+  }
+
+  function start() {
+    var id = setInterval(call, 5000)
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div> <button className="send" onClick={start}>send</button></div>
+      <div id="message-container">hi</div>
     </div>
   );
 }

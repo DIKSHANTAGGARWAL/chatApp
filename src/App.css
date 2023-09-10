@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+button{
+ 
+  width: fit-content;
+  background-color: darkgray;
+  /* border: solid;  */
+  border-radius: 5px;
+  width: 150px;
+  height: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .App{
+  background-color: red
+} */
+
+.input{
+  /* border: solid  */
+  /* color: black; */
+  
+  border-radius: 5px; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputtext{
+  position: absolute;
+  margin-top: 40%;
+  height: 40px;
+  width: 50%
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.inputroom{
+  position: relative;
+  /* margin-top: 50px; */
+  height: 25px;
+  left: 300px; 
+  width:20%
 }
 
-.App-link {
-  color: #61dafb;
+.join{
+   position: absolute;
+  margin-top: 40px;
+ 
+  left: 400px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.send{
+  position: absolute;
+  margin-top: 40%;
+  left: 700px;  
+  width:5% ;
+  height: 40px;
 }
+
+.sentmessage{
+  margin-top: 100px;
+  position: relative;
+  left: 600px;
+  size: 200px;
+  background-color: rgb(12, 66, 167);
+  width: 20%
+}
+
+.recievedmessage{
+  margin-top: 110px;
+  position: relative;
+  /* left: 300px; */
+  background-color: palegreen;
+  width: 20%
+}
+
